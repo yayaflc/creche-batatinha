@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700;900&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+:root {
+    --rosa: #EB339B;
+    --branco: #FFFFFF;
+    --cinza-clarissimo: #f2f2f2;
+    --cinza-claro: #DAD9D9;
+    --cinza-medio: #9F9F9F;
+    --cinza-escuro: #868686;
+    --cinza-dark: #5A5A5A;
+    --preto: #000000;
+
+    --montsserrat: 'Montserrat', sans-serif;
+    --roboto: 'Roboto', sans-serif;
+}
