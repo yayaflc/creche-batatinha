@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cinza-clarissimo);
+
+    display: flex;
+    justify-content: center;
+    margin-top: 148px;
+
+    font-family: var(--montsserrat);
+
+}
+
+.container {
+    background-color: white;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 752px;
+    height: 756px;
+    
+    box-sizing: border-box;
+    padding: 44px;
+
+    border-radius: 8px;
+    box-shadow: inset 1px 1px 5px var(--cinza-claro);
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    margin-bottom: 16px;
+}
+
+.cabecalho figure {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.cabecalho p {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--cinza-escuro);
+}
+
+.voltar {
+    border: none;
+    background-color: var(--branco);
+}
+
+hr {
+    background-color: var(--cinza-clarissimo);
+    border: none;
+    height: 2px;
+}
+
+.lancaNotas {
+    width: 100%;
+}
+
+.notas {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin: 16px 0;
+    gap: 120px;
+}
+
+.notas h3 {
+    font-size: 24px;
+}
+
+.notas p {
+    font-size: 16px;
+}
+
+.txt {
+    margin-top: 4px;
+}
+
+
+.desativado, 
+.desativado1,
+.desativado2,
+.desativado3,
+.desativado4,
+.desativado5 {
+    border: none;
+    background-color: var(--branco);
+    width: 33px;
+    height: 29px;
+    background-image: url(../img/Vector.svg);
+    cursor: pointer;
+}
+
+.ativo,
+.ativo1, 
+.ativo2,
+.ativo3,
+.ativo4,
+.ativo5 {
+    border: none;
+    background-color: var(--branco);
+    width: 33px;
+    height: 29px;
+    background-image: url(../img/Vector2.svg);
+    cursor: pointer;
+    
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    margin-top: 24px;
+}
+
+.imprime , .salva {
+    width: 324px;
+    height: 44px;
+
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--roboto);
+
+    margin-bottom: 40px;
+}
+
+.imprime {
+    color: var(--rosa);
+    border: solid 2px var(--rosa);
+
+    margin-right: 24px;
+    border-radius: 4px;
+
+    background-color: var(--branco);
+}
+
+.imprime:active {
+    background-color: var(--rosa);
+    color: var(--branco);
+}
+
+.botao-salvar {
+    width: 324px;
+    height: 44px;
+
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--roboto);
+
+    margin-bottom: 40px;
+
+    background-color: var(--rosa);
+    color: var(--branco);
+
+    border: none;
+    border-radius: 4px;
+}
+
+.botao-salvar:active {
+    background-color: var(--cinza-escuro);
+}
+
+.salva {
+    background-color: var(--cinza-medio);
+    color: var(--branco);
+    border: none;
+    border-radius: 4px;
+}
