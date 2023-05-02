@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+
+    <link rel="stylesheet" href="../assets/css/base.css"> 
+    <link rel="stylesheet" href="../assets/css/cadastro.css"> 
+</head>
+<body>
+    <main>
+        <section class="container">
+            <div class="cabecalho">
+                <h1>Cadastro de um novo Miau</h1>
+                <label for="fotoInput" class="foto" tabindex="0">
+                    <input type="file" accept="imagem/*" id="fotoInput"/>
+                    <span class="txtFoto">+ Clique para adicionar foto</span>
+                </label>
+            </div>
+            <form>
+                <div>
+                    <label for="nome">Nome do(a) Miau</label>
+                    <input type="text" id="nome"/>
+                </div>
+                <div>
+                    <label for="nome">Nome da pessoa Dona</label>
+                    <input type="text" id="nome"/>
+                </div>
+                <div>
+                    <button type="reset">Cancelar cadastro</button>
+                    <button type="submit">Salvar dados</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
