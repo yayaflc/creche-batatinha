@@ -2,7 +2,7 @@ const listaGatinhos = () => {
     return fetch(`https://64503b16ba9f39c6ab760fc2.mockapi.io/api/v1/users`)
     .then(resposta => {
         if(resposta.ok){
-            // console.log(resposta)
+            
             return resposta.json()
             
         }
@@ -15,41 +15,46 @@ const notasGato = document.querySelector('[data-notas]');
 const render = async (gatoId)=> {
     try {
         const bancoDeDados = await listaGatinhos()
+
+        // bancoDeDados.forEach(gatinho => {
+        //     notasGato.appendChild(criaNotas(gatinho.img, gatinho.username))
+        // })
         
-        gatoI= -1
+        idx_lista= -1
         for(i = 0; i < bancoDeDados.length; i++){
             if(gatoId === bancoDeDados[i].id){
-                gatoI = i
+                idx_lista = i
             }
         }
-        console.log(bancoDeDados[gatoI])
+        console.log(bancoDeDados[1].id)
         notasGato.appendChild(
             criaNotas(
-                bancoDeDados[gatoI].img,
-                bancoDeDados[gatoI].username,
-                bancoDeDados[gatoI].notas
+                bancoDeDados[idx_lista].img,
+                bancoDeDados[idx_lista].username,
+                bancoDeDados[idx_lista].notas
             )
         )
-
+        
     }
     catch(erro){
         console.log(erro)
     }
 }
-render("2")
+render('2')
 
 
-const criaNotas = (img, username, notas) => {
-    const novoGatinho = document.createElement('main')
+const criaNotas = (img, username) => {
+
     //cria a data
     mes = new Array ("janeiro", "fevereiro", "março", "abril", "Maio", "junho", "agosto", "outubro", "novembro", "dezembro")
     const hoje = new Date();
     data = (mes[hoje.getMonth()] +" / "+ hoje.getFullYear());
 
     //insere conteudo e data
+    const novoGatinho = document.createElement('main')
     let conteudo = `
     <div class="cabecalho">
-    <button class="voltar"><a href="./cadastro.html"><img src="../assets/img/Botão voltar.svg"></a></button>
+    <button class="voltar"><a href="./listas.html"><img src="../assets/img/Botão voltar.svg"></a></button>
         <figure>
             <img src=${img} alt="Gatinho"><figcaption>${username}</figcaption>
         </figure>
@@ -64,18 +69,11 @@ const criaNotas = (img, username, notas) => {
                 <p class="txt">Brinca com os outros gatinhos?</p>
             </div> 
             <div>
-            `
-    // console.log(notas)
-    const nota = 5
-    for (i=0; i<5; i++){
-        if (i<nota){
-            conteudo += `<button class="ativo" id=${i}></button>`
-        } else {
-            conteudo += `<button class="desativado" id=${i}></button>`
-        }
-    }
-                
-    conteudo += `
+                <button class="desativado5" id=0></button>
+                <button class="desativado5" id=1></button>
+                <button class="desativado5" id=2></button>
+                <button class="desativado5" id=3></button>
+                <button class="desativado5" id=4></button>
             </div>
         </div>
         <hr>
@@ -162,3 +160,14 @@ const criaNotas = (img, username, notas) => {
 
 
 
+    // // console.log(notas)
+    // const nota = 3;
+    // for (i=0; i<5; i++){
+    //     if (i<nota){
+    //         conteudo += `<button class="ativo" id=${i}></button>`
+    //     } else {
+    //         conteudo += `<button class="desativado" id=${i}></button>`
+    //     }
+    // }
+                
+    // conteudo += `
