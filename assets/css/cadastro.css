@@ -31,9 +31,9 @@ body {
     gap: 16px;
 }
 
-#fotoInput {
+/* #img {
     display: none;
-}
+} */
 
 .foto {
     background-color: var(--cinza-escuro);
