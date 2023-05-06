@@ -36,7 +36,8 @@ body {
 } */
 
 .foto {
-    background-color: var(--cinza-escuro);
+    background-image: url('../img/gatinho.png');
+    background-size: 150px;
     color: white;
 
     font-family: Arial, Helvetica, sans-serif;
@@ -53,6 +54,10 @@ body {
     border-radius: 8px;
 
     cursor:pointer;
+}
+
+.gatinho{
+    background-image: url(../img/gatinho.png);
 }
 
 form {
