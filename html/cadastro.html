@@ -21,17 +21,17 @@
                     <input type="file" accept="imagem/*" id="img" data-foto/><!--data atribute-->
                     <span class="txtFoto">+ Clique para adicionar foto</span>
                 </label>
-                <div>
+                <div class="inform">
                     <label for="username">Nome do(a) Miau</label>
-                    <input type="text" id="username" data-username/> <!--data atribute-->
+                    <input type="text" id="username" required data-username/> <!--data atribute-->
                 </div>
-                <div>
+                <div class="inform">
                     <label for="tutor">Nome da pessoa Dona</label>
-                    <input type="text" id="tutor" data-tutor/><!--data atribute-->
+                    <input type="text" id="tutor" required data-tutor/><!--data atribute-->
                 </div>
-                <div>
-                    <button type="reset">Cancelar cadastro</button>
-                    <button type="submit">Salvar dados</button>
+                <div class="btn">
+                    <button type="reset" class="cancela">Cancelar cadastro</button>
+                    <button type="submit" class="salva" id="btn-salva">Salvar dados</button>
                 </div>
             </form>
         </section>
