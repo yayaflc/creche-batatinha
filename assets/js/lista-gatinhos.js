@@ -16,11 +16,15 @@ const listaGatinhos = () => {
   const criaNovaLinha = (img, username, id) => {//informações que pegaremos lista de gatos cadastrados para adicionar ao HTML
 
     const linhaNovoGatinho = document.createElement('main'); //mostra que esse trecho de HTML deve ser criado próximo a TAG MAIN que é a tag pai dessa DIV
+    
+    if(img ==='') {
+      img = '../assets/img/gatinho.png';
+    }
 
     const conteudo = `
       <div class="clientes">
           <figure>
-              <img src=${img} alt="Gatinho"><figcaption>${username}</figcaption>
+              <img src="${img}" width="64" alt="Gatinho"><figcaption>${username}</figcaption>
           </figure>
           <button type="button" class="lancaNotas">Lançar Notas</button>
       </div>

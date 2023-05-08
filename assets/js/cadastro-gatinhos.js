@@ -55,6 +55,22 @@ imgBtn.addEventListener('change', (evento) => { //adiciona um evento de mudança
 }
 )
 
+
+const informacoes = document.getElementsByClassName('inform');
+for(i=0; i<informacoes.length; i++){
+    informacoes[i].addEventListener('change', async(evento)=> {
+        const username = document.querySelector('[data-username]').value
+        const tutor = document.querySelector('[data-tutor]').value
+    
+        if (username.length > 0 && tutor.length > 0){
+            const botaoSalvamento = document.getElementById('btn-salva');
+            botaoSalvamento.className = 'botao-salvar';
+
+    }
+})}
+    
+
+
 //ENVIANDO CONTEÚDO ADICIONADO AO FORMULÁRIO PARA A API E REDIRECIONANDO AS INFORMAÇÕES PARA A PAGINA LISTA
 formulario.addEventListener('submit', async (evento) => {
     evento.preventDefault()
@@ -64,7 +80,8 @@ formulario.addEventListener('submit', async (evento) => {
     const tutor = evento.target.querySelector('[data-tutor]').value
     
     // garante que o úsuário tenha preenchido todos os campos
-    if(img.length > 0 && username.length>0 && tutor.length>0){
+    
+    if (username.length > 0 && tutor.length > 0){
         await cadastraGatinho(img64str, username, tutor)
         window.location.href = './listas.html'//mostra as informações na tela na url listas
     } else {

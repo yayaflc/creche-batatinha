@@ -50,11 +50,16 @@ const criaNotas = (img, username) => {
 
     //insere conteudo e data
     const novoGatinho = document.createElement('main')
+
+    if(img ==='') {
+        img = '../assets/img/gatinho.png';
+      }
+
     let conteudo = `
     <div class="cabecalho">
         <button class="voltar"><a href="./listas.html"><img src="../assets/img/Botão voltar.svg" id="btn-voltar"></a></button>
         <figure>
-            <img src=${img} alt="Gatinho"><figcaption>${username}</figcaption>
+            <img src=${img} width="80" alt="Gatinho"><figcaption>${username}</figcaption>
         </figure>
         <p>${data}</p>
         
