@@ -1,14 +1,9 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
 body {
     background-color: var(--cinza-clarissimo);
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-top: 148px;
 
     font-family: var(--montsserrat);
 
@@ -24,6 +19,8 @@ body {
 
     width: 752px;
     height: 756px;
+
+    margin: 68px auto;
     
     box-sizing: border-box;
     padding: 44px;
@@ -182,4 +179,50 @@ hr {
     color: var(--branco);
     border: none;
     border-radius: 4px;
+}
+
+@media screen and (max-width: 750px) {
+    .container {
+    width: 552px;
+    height: 556px;
+    
+    box-sizing: none;
+    /* padding: 16px; */
+
+    }
+
+    .cabecalho figure {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 24px;
+        font-weight: 700;
+    }
+    
+    .cabecalho p {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--cinza-escuro);
+    }
+    .notas {
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        margin: 8px 0;
+        gap: 24px;
+    }
+    
+    .notas h3 {
+        font-size:18px;
+    }
+    
+    .notas p {
+        font-size: 12px;
+    }
+    
+    .txt {
+        margin-top: 4px;
+    }
+    
+
 }

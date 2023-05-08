@@ -7,13 +7,31 @@
 
     <link rel="stylesheet" href="../assets/css/base.css">
     <link rel="stylesheet" href="../assets/css/notas.css">
+    <link rel="stylesheet" href="../assets/css/cabecalho.css">
     <link rel="stylesheet" href="./listas.html">
+    <link rel="stylesheet" href="./cadastro.html">
+
     <title>Lançamento de notas</title>
     
     <link rel="stylesheet" href="./cadastro.html">
 </head>
 <body >
-    <header>
+    <header class="header">
+        <div class="header__logo">
+            <a href="index.html">
+                <img src="../Logo.svg" alt="Logo creche batatinha">
+            </a>
+        </div>
+        <nav>
+            <ul class="header__nav-list">
+                <li class="header__nav-list--empty">
+                    <a href="./listas.html" class="header__nav-btn--empty">Ver lista de Miaus</a>
+                </li>
+                <li>
+                    <a href="./cadastro.html" class="header__nav-btn--full">Cadastrar Miau</a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section class="container" id="container" data-notas>
