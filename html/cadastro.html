@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+
+    <link rel="stylesheet" href="../assets/css/base.css"> 
+    <link rel="stylesheet" href="../assets/css/cadastro.css"> 
+    <link rel="stylesheet" href="./listas.html">
+</head>
+<body>
+    <main>
+        <section class="container">
+            <div class="cabecalho">
+                <h1>Cadastro de um novo Miau</h1>
+            </div>
+            <form data-form><!--data atribute(data-form) é usado para localizar no JavaScript de onde no arquivo HTML estão as informações que o usuário preencheu no formulário -->
+                <label for="fotoInput" class="foto">
+                    <input type="file" accept="imagem/*" id="img" data-foto/><!--data atribute-->
+                    <span class="txtFoto">+ Clique para adicionar foto</span>
+                </label>
+                <div>
+                    <label for="username">Nome do(a) Miau</label>
+                    <input type="text" id="username" data-username/> <!--data atribute-->
+                </div>
+                <div>
+                    <label for="tutor">Nome da pessoa Dona</label>
+                    <input type="text" id="tutor" data-tutor/><!--data atribute-->
+                </div>
+                <div>
+                    <button type="reset">Cancelar cadastro</button>
+                    <button type="submit">Salvar dados</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="../assets/js/cadastro-gatinhos.js"></script>
+</body>
+</html>

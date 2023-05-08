@@ -1,9 +1,8 @@
-
-const data = document.getElementById('data-hoje')
+const data = document.querySelector('#data-hoje p');
 
 mes = new Array ("janeiro", "fevereiro", "março", "abril", "Maio", "junho", "agosto", "outubro", "novembro", "dezembro")
 const hoje = new Date();
 
-data.innerText = (mes[hoje.getMonth()] +" / "+ hoje.getFullYear())
+data.innerHTML = (mes[hoje.getMonth()] +" / "+ hoje.getFullYear());
 
 
