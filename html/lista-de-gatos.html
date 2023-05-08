@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/lista.css">
     <title>Creche Batatinha</title>
 </head>
 <body>
     <header class="header">
         <div class="header__logo">
             <a href="index.html">
-                <img src="./Logo.svg" alt="Logo creche batatinha">
+                <img src="../Logo.svg" alt="Logo creche batatinha">
             </a>
         </div>
         <nav>
             <ul class="header__nav-list">
                 <li class="header__nav-list--empty">
-                    <a href="../creche-batatinha/html/lista-de-gatos.html" class="header__nav-btn--empty">Ver lista de Miaus</a>
+                    <a href="#" class="header__nav-btn--empty">Ver lista de Miaus</a>
                 </li>
                 <li>
                     <a href="#" class="header__nav-btn--full">Cadastrar Miau</a>
@@ -26,10 +27,10 @@
         </nav>
     </header>
     <main>
-        <div class="main-content">
-            <h1>Boas-vindas a Creche <br>Batatinha, </h1>
-            <p>Seu Miau Feliz!</p>
-        </div>
+        <h1 class="titulo-lista">Lista de Miaus</h1>
+        
+        <ul id="item-list"></ul>
+        <script src="../assets/js/lista.js"></script>
     </main>
 </body>
 </html>
