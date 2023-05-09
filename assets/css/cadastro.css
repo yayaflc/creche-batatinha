@@ -15,7 +15,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 24px;
 
     height: 532px; 
     max-width: 752px;
@@ -25,7 +24,6 @@ body {
     margin: 68px auto;
     box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
     border-radius: 8px;
-    padding: 32px;
     box-sizing: border-box;
 
 }
@@ -83,18 +81,18 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    
 
+    width: 100%;
+    max-width: 672px;
 }
 
 .nome {
     position: absolute;
 
     width: 100%;
-    height: 56px;
 
-    color: var(--cinza-escuro);
+
+    color: var(--cinza-clarissimo);
     font-size: 16px;
 
     border-radius: 4px;
@@ -102,21 +100,17 @@ h1 {
 
     padding: 16px;
     font-family: 'Roboto', sans-serif;
+    font-weight: 900;
 
     box-shadow: 2px 2px 5px var(--cinza-claro);
-
-    z-index: 2; 
 }
 
 .input_nome {
-    position: relative;
-    box-sizing: content-box;
-    padding: 24px;
-
+    padding: 16px;
     width: 100%;
-    height: 10px;
 
     border: none;
+    opacity: .3;
 }
 .gatinho{
     background-image: url(../img/gatinho.png);
@@ -126,23 +120,20 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
-    
+    gap: 32px;
 }
 
 .btn {
     display: flex;
     align-items: center;
+    gap:24px;
 
     width: 100%;
-
-    margin-top: 16px;
-    gap: 16px;
 }
 
 .cancela , .salva {
-    width: 324px;
-    height: 44px;
+    width: 100%;
+    padding: 16px 0;
 
     font-size: 16px;
     font-weight: 400;
@@ -168,14 +159,12 @@ form {
 }
 
 .botao-salvar {
-    width: 324px;
-    height: 44px;
+    width: 100%;
+    padding: 16px 0;
 
     font-size: 16px;
     font-weight: 400;
     font-family: var(--roboto);
-
-    margin-bottom: 40px;
 
     background-color: var(--rosa);
     color: var(--branco);
@@ -200,6 +189,7 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 16px;
    }
    .cancela, .salva {
     margin-bottom: 0;
@@ -207,7 +197,10 @@ form {
 
     .botao-salvar {
     margin-bottom: 0;
-}
+    }
+    .container {
+    width: 100%;
+    }
 }
 
 @media screen and (max-width: 492px){
@@ -217,5 +210,8 @@ form {
 
     .nome {
         width: 350px;
+    }
+    h1 {
+        font-size: 24px;
     }
 }
