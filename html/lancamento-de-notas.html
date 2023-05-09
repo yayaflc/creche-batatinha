@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,118 +7,41 @@
 
     <link rel="stylesheet" href="../assets/css/base.css">
     <link rel="stylesheet" href="../assets/css/notas.css">
-    <title>Lançamento de notas</title>
+    <link rel="stylesheet" href="../assets/css/cabecalho.css">
+    <link rel="stylesheet" href="./listas.html">
+    <link rel="stylesheet" href="./cadastro.html">
 
-   
+    <title>Lançamento de notas</title>
+    
+    <link rel="stylesheet" href="./cadastro.html">
 </head>
 <body >
-    <header>
+    <header class="header">
+        <div class="header__logo">
+            <a href="index.html">
+                <img src="../Logo.svg" alt="Logo creche batatinha">
+            </a>
+        </div>
+        <nav>
+            <ul class="header__nav-list">
+                <li class="header__nav-list--empty">
+                    <a href="./listas.html" class="header__nav-btn--empty">Ver lista de Miaus</a>
+                </li>
+                <li>
+                    <a href="./cadastro.html" class="header__nav-btn--full">Cadastrar Miau</a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <section class="container" id="container">
-            <div class="cabecalho">
-                <button class="voltar"><img src="../assets/img/Botão voltar.svg"></button>
-                <figure>
-                    <img src="../assets/img/ava.svg" alt="Gatinho"><figcaption>Buzz</figcaption>
-                </figure>
-                <p id="data-hoje">a</p>
-            
-            </div>
-            <div class="lancaNotas">
-                <hr>
-                <div class="notas">
-                    <div>
-                        <h3>Socialização</h3>
-                        <p class="txt">Brinca com os outros gatinhos?</p>
-                    </div> 
-                    <div>
-                        <button class="desativado" id=0></button>
-                        <button class="desativado" id=1></button>
-                        <button class="desativado" id=2></button>
-                        <button class="desativado" id=3></button>
-                        <button class="desativado" id=4></button>
-                        
-                    </div>
-                </div>
-                <hr>
-                <div class="notas">
-                    <div>
-                        <h3>Sonequinha</h3>
-                        <p class="txt">Tira bastante soninho?</p>
-                    </div>
-                    <div>
-                        <button class="desativado1" id=0></button>
-                        <button class="desativado1" id=1></button>
-                        <button class="desativado1" id=2></button>
-                        <button class="desativado1" id=3></button>
-                        <button class="desativado1" id=4></button>
-                    </div>   
-                </div>
-                <hr>
-                <div class="notas">
-                    <div>
-                        <h3>Alimentação</h3>
-                        <p class="txt">Está comendo direitinho?</p>
-                    </div>
-                    <div>
-                        <button class="desativado2" id=0></button>
-                        <button class="desativado2" id=1></button>
-                        <button class="desativado2" id=2></button>
-                        <button class="desativado2" id=3></button>
-                        <button class="desativado2" id=4></button>
-                    </div>   
-                </div>
-                <hr>
-                <div class="notas">
-                    <div>
-                        <h3>Brincadeiras</h3>
-                        <p class="txt">Participa das brincadeiras em grupo?</p>
-                    </div>
-                    <div>
-                        <button class="desativado3" id=0></button>
-                        <button class="desativado3" id=1></button>
-                        <button class="desativado3" id=2></button>
-                        <button class="desativado3" id=3></button>
-                        <button class="desativado3" id=4></button>
-                    </div>
-                </div>
-                <hr>
-                <div class="notas">
-                    <div>
-                        <h3>Preguicinha</h3>
-                        <p class="txt">Está mais agitado ou mais quietinho?</p>
-                    </div>
-                    <div>
-                        <button class="desativado4" id=0></button>
-                        <button class="desativado4" id=1></button>
-                        <button class="desativado4" id=2></button>
-                        <button class="desativado4" id=3></button>
-                        <button class="desativado4" id=4></button>
-                    </div>   
-                </div>
-                <hr>
-                <div class="notas">
-                    <div>
-                        <h3>Fotos</h3>
-                        <p class="txt">Nos deixa tirar fotos?</p>
-                    </div>
-                    <div>
-                        <button class="desativado5" id=0></button>
-                        <button class="desativado5" id=1></button>
-                        <button class="desativado5" id=2></button>
-                        <button class="desativado5" id=3></button>
-                        <button class="desativado5" id=4></button>
-                    </div>   
-                </div>
-                <hr>
-            </div>
-            <div class="btn">
-                <button class="imprime" id="btn-pdf">Imprimir Boletim</button>
-                <button class="salva" id="btn-salva">Salvar notas</button>
-            </div>
+        <section class="container" id="container" data-notas>
+        
+           
         </section>
     </main>
-    <script src="../assets/js/data.js"></script>
-    <script src="../assets/js/patinhas.js"></script>
+    <!-- <script src="../assets/js/data.js"></script> -->
+    <!-- <script src="../assets/js/patinhas.js"></script> -->
+    <script src="../assets/js/cria-notas.js"></script>
+
 </body>
 </html>

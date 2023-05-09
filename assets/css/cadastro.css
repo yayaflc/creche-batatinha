@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cinza-clarissimo);
+}
+
+.container {
+    background-color: var(--branco);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+
+    height: 532px; 
+    width: 752px;
+
+    border-radius: 4px;
+    margin: auto;
+    margin-top: 148px;
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+/* #img {
+    display: none;
+} */
+
+.foto {
+    background-image: url('../img/gatinho.png');
+    background-size: 150px;
+    color: white;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+
+    cursor:pointer;
+}
+
+.gatinho{
+    background-image: url(../img/gatinho.png);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    margin-top: 24px;
+}
+
+.cancela , .salva {
+    width: 324px;
+    height: 44px;
+
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--roboto);
+
+    margin-bottom: 40px;
+}
+
+.cancela {
+    color: var(--rosa);
+    border: solid 2px var(--rosa);
+
+    margin-right: 24px;
+    border-radius: 4px;
+
+    background-color: var(--branco);
+}
+
+.cancela:active {
+    background-color: var(--rosa);
+    color: var(--branco);
+}
+
+.botao-salvar {
+    width: 324px;
+    height: 44px;
+
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--roboto);
+
+    margin-bottom: 40px;
+
+    background-color: var(--rosa);
+    color: var(--branco);
+
+    border: none;
+    border-radius: 4px;
+}
+
+.botao-salvar:active {
+    background-color: var(--cinza-escuro);
+}
+
+.salva {
+    background-color: var(--cinza-medio);
+    color: var(--branco);
+    border: none;
+    border-radius: 4px;
+}

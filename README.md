@@ -1,17 +1,20 @@
 # <p align="center"> Creche Batatinha 🥔
 <img src="banner.jpg" width=100%>
 
-📚 projeto em grupo realizado através do Programa Desenvolve @GrupoBoticário.
+📚 projeto realizado através do Programa Desenvolve @GrupoBoticário.
 
 ---
 
-**👤 COLABORADORES:**
-- Nicolas
+**👩‍💻 TIME:**
+- Antonio
 - Joice
+- Nicolas
 - Yasmin
-- Antionio
-- Lucas
-- Rogério
+
+**👨‍🏫 MENTORES:**
+- Bianca Pereira
+- Luiz Paulo
+- Marcelo Velloso
 
 ---
 
