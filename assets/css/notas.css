@@ -1,10 +1,5 @@
 body {
     background-color: var(--cinza-clarissimo);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
     font-family: var(--montsserrat);
 
 }
@@ -26,7 +21,9 @@ body {
     padding: 44px;
 
     border-radius: 8px;
-    box-shadow: inset 1px 1px 5px var(--cinza-claro);
+    box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+    border-radius: 8px;
+
 }
 
 .cabecalho {
@@ -183,33 +180,33 @@ hr {
 
 @media screen and (max-width: 750px) {
     .container {
-    width: 552px;
-    height: 556px;
-    
-    box-sizing: none;
-    /* padding: 16px; */
+        width: 552px;
+        height: 556px;
+        
+        box-sizing: none;
+        padding: 24px;
+    }
 
+    .cabecalho {
+        width: 480px;
     }
 
     .cabecalho figure {
-        display: flex;
-        align-items: center;
         gap: 8px;
         font-size: 24px;
-        font-weight: 700;
     }
     
     .cabecalho p {
         font-size: 14px;
-        font-weight: 600;
-        color: var(--cinza-escuro);
     }
+
+    .lancaNotas {
+        width: 480px;   
+    }
+
     .notas {
-        display: flex;
-        justify-content:space-between;
-        align-items: center;
         margin: 8px 0;
-        gap: 24px;
+        gap: 8px;
     }
     
     .notas h3 {
@@ -223,6 +220,99 @@ hr {
     .txt {
         margin-top: 4px;
     }
-    
 
+    .btn {
+        margin-top: 16px;
+    }
+    
+    .imprime , .salva {
+        width: 230px;
+        margin-bottom: 0;
+    }
+
+    .botao-salvar {
+        width: 230px;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 640px){
+    .container {
+        width: 100%;
+        height: 100%;
+        
+        box-sizing: none;
+        padding: 16px auto;
+    }
+
+    .cabecalho {
+        width: 350px;
+        margin-bottom: 16px;
+        margin-top: 8px;
+    }
+
+    .cabecalho figure {
+        gap: 6px;
+        font-size: 24px;
+        margin-left: 16px;
+    }
+
+    .cabecalho button img {
+        width: 32px;
+        margin-left: 24px;
+    }
+
+    .cabecalho figure img {
+        width: 48px;
+    }
+    
+    .cabecalho p {
+        font-size: 16px;
+    }
+
+    .lancaNotas {
+        width: 380px;   
+    }
+
+    .notas {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 16px 0;
+        gap: 24px;
+    }
+    
+    .notas h3 {
+        font-size:18px;
+    }
+    
+    .notas p {
+        font-size: 14px;
+    }
+    
+    .txt {
+        margin-top: 2px;
+    }
+
+    .btn {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+    
+    .imprime {
+        margin-right: 0;
+    }
+
+    .imprime , .salva {
+        width: 300px;
+        margin-bottom: 0;
+    }
+
+    .botao-salvar {
+        width: 300px;
+        margin-bottom: 0;
+    }
 }
