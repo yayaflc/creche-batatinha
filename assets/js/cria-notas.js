@@ -59,12 +59,11 @@ const criaNotas = (img, username) => {
     <div class="cabecalho">
         <button class="voltar"><a href="./listas.html"><img src="../assets/img/Botão voltar.svg" id="btn-voltar"></a></button>
         <figure>
-            <img src=${img} width="80" alt="Gatinho"><figcaption>${username}</figcaption>
+            <img src=${img} width=64" alt="Gatinho"><figcaption>${username}</figcaption>
         </figure>
-        <p>${data}</p>
-        
-        </div>
-        <div class="lancaNotas">
+        <p>${data}</p> 
+    </div>
+    <div class="lancaNotas">
         <hr>
         <div class="notas">
             <div>
@@ -150,7 +149,7 @@ const criaNotas = (img, username) => {
             </div>   
         </div>
         <hr>
-        </div>
+    </div>
         <div class="btn">
             <button class="imprime" id="btn-pdf">Imprimir Boletim</button>
             <button class="salva" id="btn-salva">Salvar notas</button>
