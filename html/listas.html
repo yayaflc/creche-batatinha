@@ -1,26 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../assets/css/base.css">
+        <link rel="stylesheet" href="../assets/css/cabecalho.css">
+        <link rel="stylesheet" href="../assets/css/lista.css">
+        <link rel="stylesheet" href="./lancamento-de-notas.html">
 
-    <link rel="stylesheet" href="./lancamento-de-notas.html">
-</head>
-<body>
-    <main>
-        <section>
-            <div>
-                <h1>Lista de Miaus</h1>
+        <title>Lista | Creche Batatinha</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__logo">
+                <a href="../index.html">
+                    <img src="../Logo.svg" alt="Logo creche batatinha">
+                </a>
             </div>
-            <div data-lista><!--data atribute(data-lista) é usado para localizar no JavaScript onde no arquivo HTML será adicionado a "const conteudo" -->
-                
-               <!--aqui será adicionado foto, nome do gatinho e o botão lança notas. O HTML com essas informações está presente no arquivo lista-gatinhos.js -->
-            </div>
-        </section>
-    </main>
-    <script src="../assets/js/lista-gatinhos.js"></script>
-   
-</body>
+            <nav>
+                <ul class="header__nav-list">
+                    <li class="header__nav-list--empty">
+                        <a href="./listas.html" class="header__nav-btn--empty">Ver lista de Miaus</a>
+                    </li>
+                    <li>
+                        <a href="./cadastro.html" class="header__nav-btn--full">Cadastrar Miau</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h1 class="titulo-lista">Lista de Miaus</h1>
+                <div class="teste" data-lista><!--data atribute(data-lista) é usado para localizar no JavaScript onde no arquivo HTML será adicionado a "const conteudo" -->
+                    
+                <!--aqui será adicionado foto, nome do gatinho e o botão lança notas. O HTML com essas informações está presente no arquivo lista-gatinhos.js -->
+                </div>
+            </section>
+        </main>
+        <script src="../assets/js/lista-gatinhos.js"></script>
+    
+    </body>
 </html>

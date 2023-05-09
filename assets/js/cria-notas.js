@@ -12,36 +12,9 @@ const listaGatinhos = () => {
     })
 }
 
-const notasGato = document.querySelector('[data-notas]');
+ //MOSTRANDO COMO O CONTEÚDO DEVE SER ADICIONADO AO HTML
 
-const renderNotasGato = async ()=> {
-    try {     
-        const urlParams = new URLSearchParams(window.location.search);
-        const gatoId = urlParams.get('id');   
-        const bancoDeDados = await listaGatinhos(gatoId)
-
-        idx_lista= -1
-        for(let i = 0; i < bancoDeDados.length; i++){
-            if(gatoId === bancoDeDados[i].id){
-                idx_lista = i
-            }
-        }
-        // console.log(bancoDeDados[1].id)
-        notasGato.appendChild(
-            criaNotas(
-                bancoDeDados[idx_lista].img,
-                bancoDeDados[idx_lista].username,
-                bancoDeDados[idx_lista].notas
-            )
-        )
-    }
-    catch(erro){
-        console.log(erro)
-    }
-}  
-renderNotasGato();
-
-const criaNotas = (img, username) => {
+const criaNotas = (img, username) => { //informações que pegaremos lista de gatos cadastrados para adicionar ao HTML
 
     //cria a data
     mes = new Array ("janeiro", "fevereiro", "março", "abril", "Maio", "junho", "agosto", "outubro", "novembro", "dezembro")
@@ -59,12 +32,11 @@ const criaNotas = (img, username) => {
     <div class="cabecalho">
         <button class="voltar"><a href="./listas.html"><img src="../assets/img/Botão voltar.svg" id="btn-voltar"></a></button>
         <figure>
-            <img src=${img} width="80" alt="Gatinho"><figcaption>${username}</figcaption>
+            <img src=${img} width=64" alt="Gatinho"><figcaption>${username}</figcaption>
         </figure>
-        <p>${data}</p>
-        
-        </div>
-        <div class="lancaNotas">
+        <p>${data}</p> 
+    </div>
+    <div class="lancaNotas">
         <hr>
         <div class="notas">
             <div>
@@ -150,7 +122,7 @@ const criaNotas = (img, username) => {
             </div>   
         </div>
         <hr>
-        </div>
+    </div>
         <div class="btn">
             <button class="imprime" id="btn-pdf">Imprimir Boletim</button>
             <button class="salva" id="btn-salva">Salvar notas</button>
@@ -161,6 +133,39 @@ const criaNotas = (img, username) => {
     return novoGatinho
 };
 
+ //PEGANDO OS DADOS DA API E RENDERIZANDO NA TELA
+
+const notasGato = document.querySelector('[data-notas]');
+
+const renderNotasGato = async ()=> {//a função assíncrona render irá tentar
+    try {     
+        const urlParams = new URLSearchParams(window.location.search);
+        const gatoId = urlParams.get('id');   //fazer uma busca pelo ID do gatinho selecionado contido na URL do botão Lança notas da página de lista
+        const bancoDeDados = await listaGatinhos(gatoId) //depois vai fazer a busca pelos dados dele na listaGatinhos
+
+        idx_lista= -1
+        for(let i = 0; i < bancoDeDados.length; i++){
+            if(gatoId === bancoDeDados[i].id) {
+                idx_lista = i
+            }
+        }
+        
+        notasGato.appendChild(
+            criaNotas( //vai criar uma nova Nota e adicionar as informações a ela
+                bancoDeDados[idx_lista].img,
+                bancoDeDados[idx_lista].username,
+                bancoDeDados[idx_lista].notas
+            )
+        )
+    }
+    catch(erro){ //caso dê errado ele irá pegar o erro
+        console.log(erro)
+    }
+}  
+renderNotasGato();
+
+
+//VERIFICA SE O BOTÃO SALVAR JÁ PODE SE ATIVADO
 function verificarHabilitarBotaoSalvamento() {
     const elementosAtivos = document.querySelectorAll('.ativo');
     const elementosAtivos1 = document.querySelectorAll('.ativo1');
@@ -181,6 +186,8 @@ function verificarHabilitarBotaoSalvamento() {
     } 
     return false
 }
+
+//VERIFICA SE O ARQUIVO JA PODE SER SALVO
 function verificaRequisitosSalvamento() {
     let posso_salvar = verificarHabilitarBotaoSalvamento()
     console.log("===>"+posso_salvar)
@@ -192,7 +199,7 @@ function verificaRequisitosSalvamento() {
     return posso_salvar
 }
  
-
+//TROCA A COR DAS PATINHAS QUANDO CLICADAS
 function aplicarComportamento(evento, classeElementoDesativado, classeElementoAtivo) {
     let desativados = document.getElementsByClassName(classeElementoDesativado)
     let ativos = document.getElementsByClassName(classeElementoAtivo)
@@ -225,9 +232,9 @@ notasGato.addEventListener('click', (evento) => {
             }
         } else if (evento.target.id === "btn-voltar") {
             window.location.href="./listas.html"
-        } else if (evento.target.id === "btn-pdf") {
+        } else if (evento.target.id === "btn-pdf") { //abre a janela de salvar pdf caso ocorra um clique no botão btn pdf
             window.print();
-        } else {        
+        } else {      //chamando a função que troca a cor das patinhas por meio do evento click
             aplicarComportamento(evento, "desativado","ativo")
             aplicarComportamento(evento, "desativado1","ativo1")
             aplicarComportamento(evento, "desativado2","ativo2")
