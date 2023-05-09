@@ -9,8 +9,27 @@
     <link rel="stylesheet" href="../assets/css/base.css"> 
     <link rel="stylesheet" href="../assets/css/cadastro.css"> 
     <link rel="stylesheet" href="./listas.html">
+    <link rel="stylesheet" href="../assets/css/cabecalho.css">
+    <link rel="stylesheet" href="./cadastro.html">
 </head>
 <body>
+    <header class="header">
+        <div class="header__logo">
+            <a href="../index.html">
+                <img src="../Logo.svg" alt="Logo creche batatinha">
+            </a>
+        </div>
+        <nav>
+            <ul class="header__nav-list">
+                <li class="header__nav-list--empty">
+                    <a href="./listas.html" class="header__nav-btn--empty">Ver lista de Miaus</a>
+                </li>
+                <li>
+                    <a href="./cadastro.html" class="header__nav-btn--full">Cadastrar Miau</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <section class="container">
             <div class="cabecalho">
@@ -18,16 +37,16 @@
             </div>
             <form data-form><!--data atribute(data-form) é usado para localizar no JavaScript de onde no arquivo HTML estão as informações que o usuário preencheu no formulário -->
                 <label for="fotoInput" class="foto">
-                    <input type="file" accept="imagem/*" id="img" data-foto/><!--data atribute-->
+                    <input type="file" class="input_imagem" accept="imagem/*" id="img" data-foto/><!--data atribute-->
                     <span class="txtFoto">+ Clique para adicionar foto</span>
                 </label>
                 <div class="inform">
-                    <label for="username">Nome do(a) Miau</label>
-                    <input type="text" id="username" required data-username/> <!--data atribute-->
+                    <label for="username" class="nome">Nome do(a) Miau</label>
+                    <input type="text" class="input_nome" id="username" required data-username/> <!--data atribute-->
                 </div>
                 <div class="inform">
-                    <label for="tutor">Nome da pessoa Dona</label>
-                    <input type="text" id="tutor" required data-tutor/><!--data atribute-->
+                    <label for="tutor" class="nome">Nome da pessoa Dona</label>
+                    <input type="text" class="input_nome" id="tutor" required data-tutor/><!--data atribute-->
                 </div>
                 <div class="btn">
                     <button type="reset" class="cancela">Cancelar cadastro</button>
