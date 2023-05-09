@@ -1,66 +1,79 @@
+body {
+    background-color: var(--cinza-clarissimo);
+    font-family: var(--montsserrat);
+}
+
 .titulo-lista {
-  font-size: 42px;
-  background-color: var(--branco);
-  margin-bottom: 38px;
-}
-
-main {
-  /* position: absolute;
-  left: 548px;
-  right: 548px;
-  top: 148px;
-  bottom: 301px; */
-  width: 852px;
-  height: auto;
-  padding-bottom: 36px;
-  min-height: 200px;
-  margin-top: 78px;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
-  display: flex;
-  flex-direction: column;
-  background: var(--branco);
-  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
-  border-radius: 8px;
-}
-
-/* Estilos para a lista */
-#item-list {
-    list-style: none;
-    padding: 0;
-    width: 90%;
+    font-size: 38px;
     background-color: var(--branco);
-  }
-  
-  /* Estilos para cada item */
-  .item {
+    margin-bottom: 38px;
+    margin-top: 38px;
+}
+
+section {
+    width: 852px;
+    height: auto;
+    padding-bottom: 36px;
+    min-height: 200px;
+    margin-top: 78px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
     display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+    flex-direction: column;
     background-color: var(--branco);
     box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
     border-radius: 8px;
+    align-items: center;
+}
+
+/* Estilos para a lista */
+#data-lista {
+    list-style: none;
+    padding: 0;
+    background-color: var(--branco);
+}
+
+.teste {
+    background-color: var(--branco);
+    width: 90%;
+}
+
+/* Estilos para cada item */
+.clientes {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+    border-radius: 8px;
     height: 88px;
-  }
-  
-  .item img {
+}
+
+.img-gato {
     width: 62px;
     height: 62px;
     object-fit: cover;
     margin-right: 16px;
-    background-color: var(--branco);
     border-radius: 50%;
     margin-left: 16px;
-  }
-  
-  .item h2 {
+}
+
+.info-gato {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.nome-gato {
     margin: 0;
     font-family: var(--montsserrat);
-    background-color: var(--branco);
-  }
-  
-  .item button {
+    font-size:24px;
+    font-weight: bold;
+}
+
+.lancaNotas {
     margin-left: auto;
     margin-right: 16px;
     width: 133px;
@@ -72,5 +85,48 @@ main {
     font-size: 16px;
     background-color: var(--branco);
     cursor: pointer;
-  }
-  
+}
+
+@media screen and (max-width: 750px){
+    .header__nav-list {
+        gap: 1rem;
+    }
+
+    section {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 492px){
+    .header__nav-list {
+        padding-top: 1rem;
+    }
+
+    .header__nav-btn--full {
+        width: 10.4181rem;
+        text-align: center;
+    }
+
+    section {
+        width: 400px;
+    }
+
+    .titulo-lista {
+        font-size: 32px;
+    }
+
+    .nome-gato {
+        font-size: 22px;
+    }
+
+    .img-gato {
+        width: 52px;
+        height: 52px;
+    }
+
+    .lancaNotas {
+        width: 98px;
+        height: 32px;
+        font-size: 14px;
+    }
+}
